@@ -1,0 +1,21 @@
+--------Admin------
+* agregar medico
+* listar medico
+-----Paciente------
+* Agregar Paciente
+* Listar Paciente
+* Nueva Cita
+* Listar Citas
+
+
+
+
+-------------------
+* Listar Usuarios
+-------------------
+* Nueva Cita
+* Listar Citas
+-------------------
+* Agregar Historias Clinicas
+* Listar Historias Clinicas
+

@@ -1,0 +1,120 @@
+<app-navbarprincipal></app-navbarprincipal>
+
+<br />
+<br />
+<br />
+<br />
+
+<div>
+    <div class="needs-validation blanquito" novalidate>
+        <br />
+        <h1 class="text-center"><strong>Bienvenido al registro del Odontólogo</strong></h1>
+        <form class="row g-3 interno  form-group" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+            <div class="col-sm-6">
+                <label for="firstName" class="form-label">Correo Electronico*</label>
+                <input type="email" name="correo" class="form-control" id="firstName" placeholder="nombre@correo.com"
+                    value="">
+                <div class="invalid-feedback">
+                    Se requiere un Correo válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="lastName" class="form-label">Contraseña*</label>
+                <input type="text" name="contraseña" class="form-control" id="lastName" placeholder="contraseña"
+                    value="">
+                <div class="invalid-feedback">
+                    Se requiere una contraseña válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="nombre" class="form-label">Nombre*</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control"
+                formControlName="nombre">
+                <div class="invalid-feedback">
+                    Se requiere un Nombre válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="apellido" class="form-label">Apellido*</label>
+                <input type="text" name="apellido" id="lastName" placeholder="apellido" class="form-control"
+                formControlName="apellido">
+                <div class="invalid-feedback">
+                    Se requiere un Apellido válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="tiposangre" class="form-label">Tipo de sangre*</label>
+                <input type="text" name="tiposangre" id="tiposangre" placeholder="A+" class="form-control"
+                formControlName="tiposangre">
+                <div class="invalid-feedback">
+                    Se requiere un valor válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="firstName" class="form-label">Fecha de nacimiento*</label>
+                <input type="date" name="fechanacimiento" class="form-control" id="firstName" placeholder="dd/mm/aaaa">
+                <div class="invalid-feedback">
+                    Se requiere un Numero válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="country" class="form-label">Tipo de Identificación*</label>
+                <select class="form-select" name="tipoidentificacion" id="country">
+                    <option value="">Elejir...</option>
+                    <option>Cedula</option>
+                    <option>Pasaporte</option>
+                </select>
+                <div class="invalid-feedback">
+                    Por favor seleccione el tipo de identificación.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="firstName" class="form-label">Numero de identificación*</label>
+                <input type="number" name="numeroidentificacion" class="form-control" id="firstName"
+                    placeholder="0000000000">
+                <div class="invalid-feedback">
+                    Se requiere un Numero válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="country" class="form-label">Especialidad*</label>
+                <select class="form-select" name="especialidad" id="country">
+                    <option value="">Elejir...</option>
+                    <option>Dentista general</option>
+                    <option>Odontopediatra o dentista pediátrico</option>
+                    <option>Ortodoncista</option>
+                    <option>Periodoncista o especialista en encías</option>
+                    <option>Endodoncista o especialista en tratamientos de conducto</option>
+                    <option>Patólogo oral o cirujano oral</option>
+                    <option>Prostodoncista</option>
+                </select>
+                <div class="invalid-feedback">
+                    Por favor seleccione una especialidad.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="firstName" class="form-label">Trabajo profesional*</label>
+                <input type="text" name="trabajo" class="form-control" id="firstName" placeholder="Odontologo">
+                <div class="invalid-feedback">
+                    Se requiere un trabajo válido.
+                </div>
+            </div>
+            
+            <div class="col">
+                <input type="submit" value="Enviar" class="btn btn-info">
+            </div>
+        </form>
+        <br />
+    </div>
+</div>
+
+<app-piepagina></app-piepagina>

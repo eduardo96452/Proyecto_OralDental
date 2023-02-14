@@ -1,0 +1,29 @@
+<app-navbarprincipal></app-navbarprincipal>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="places">
+    <table class="table" >
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Tipo de Sangre</th>
+          </tr>
+        </thead >
+        <tbody *ngFor="let dentista of dentistas">
+          <tr>
+            <th scope="row"></th>
+            <td>{{dentista.nombre}}</td>
+            <td>{{dentista.apellido}}</td>
+            <td>{{dentista.tiposangre}}</td>
+            <td><button class="btn btn-outline-danger" (click)="onClickDelete(dentista)">Borrar</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+<app-piepagina></app-piepagina>

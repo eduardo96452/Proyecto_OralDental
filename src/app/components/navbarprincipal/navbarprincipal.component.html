@@ -1,0 +1,137 @@
+<!--<div class="sidebar close">
+    <div class="logo-details">
+        <i class='bx bxl-c-plus-plus'></i>
+        <span class="logo_name">OralDentalSoft</span>
+    </div>
+    <ul class="nav-links">
+        <li>
+            <a routerLink="/registro">
+                <i class='bx bx-grid-alt'></i>
+                <span class="link_name">Principal</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name">Principal</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a>
+                    <i class='bx bx-collection'></i>
+                    <span class="link_name">Registros</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow'></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Registros</a></li>
+                <li><a routerLink="/registro">Registro de Dentista</a></li>
+                <li><a href="#">Listado de Dentistas</a></li>
+            </ul>
+        </li>
+        <li>
+            <a>
+                <i class='bx bx-cog'></i>
+                <span class="link_name">Configuración</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name">Configuración</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="profile-details">
+                <div class="profile-content">
+                    <img src="../../../assets/img/perfil.png" alt="profileImg">-
+                </div>
+                <div class="name-job">
+                    <div class="profile_name">Eduardo Estévez</div>
+                    <div class="job">Odontologo</div>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name">Salir</a></li>
+                    </ul>
+                </div>
+
+      
+
+                <i class='bx bx-log-out' routerLink="/login"></i>
+            </div>
+
+           
+
+        </li>
+    </ul>
+</div>
+<section class="home-section">
+    <div class="home-content">
+        <i class='bx bx-menu'></i>
+        <span class="text">Registro de Odontólogos</span>
+    </div>
+    <div>
+        <h4>Nombre de usuario*</h4>
+    </div>
+</section>-->
+<main>
+    <nav class="navbar fixed-top" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <h2><strong>OralDentalSoft</strong></h2>
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
+                    class='bx bx-menu'></i>Menu</button>
+            
+        </div>        
+    </nav>
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel" style="background-color: #e3f2fd;">
+        <div class="offcanvas-header ">
+            <i class="bi bi-bootstrap-fill"></i>
+            <span class="fs-5 fw-semibold ">Menu</span>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled ps-0">
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#home-collapse" routerLink="/registro"
+                        aria-expanded="false">
+                        Home
+                    </button>
+                </li>
+
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                        Odontologos
+                    </button>
+                    <div class="collapse" id="dashboard-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a routerLink="/registropaciente"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Agregar
+                                    Paciente</a></li>
+                            <li><a routerLink="/listadopaciente" class="link-dark d-inline-flex text-decoration-none rounded">Listar
+                                    Paciente</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="border-top my-3"></li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                        Cuenta
+                    </button>
+                    <div class="collapse" id="account-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Perfile</a>
+                            </li>
+                            <li><a href="#"
+                                    class="link-dark d-inline-flex text-decoration-none rounded">Configuración</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class=" d-flex align-items-end flex-column mb-3" style="height: 200px;">
+                        <button (click)="onClick" class=" mt-auto p-2 btn btn-danger">Cerrar Sesión</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>

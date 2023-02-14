@@ -1,0 +1,33 @@
+.form-signin {
+    max-width: 500px;
+    padding: 15px;
+    position: absolute;
+    left: 14%;
+    top: 19.5%;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin [type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.contenedor{
+    background: url('../../../assets/img/imagenfondo.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.blanquito{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.651);
+}
