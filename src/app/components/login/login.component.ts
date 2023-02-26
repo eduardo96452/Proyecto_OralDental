@@ -1,6 +1,6 @@
 import { UserService } from './../../services/user.service';
 import { Component } from '@angular/core';
-import { Route } from '@angular/router';
+import { Router } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -12,7 +12,7 @@ export class LoginComponent {
   formReg: FormGroup;
 
   constructor(
-    private userService:UserService
+    private userService:UserService, private router:Router
   ){
     this.formReg=new FormGroup({
       email: new FormControl(),
@@ -21,14 +21,12 @@ export class LoginComponent {
   }
 
   onSubmit(){
-    /*this.userService.register(this.formReg.value)
-    .then(response =>{
-      console.log(response);
-    })
-    .catch(error => console.log(error));*/
     this.userService.login(this.formReg.value)
     .then(response =>{
       console.log(response);
+      alert('Inicio de sesion correcto!');
+      this.userService.logeado = true;
+      this.router.navigate(['/bienvenida']);
     })
     .catch(error => console.log(error));
   }

@@ -1,1 +1,79 @@
-<p>navbardentista works!</p>
+<nav class="navbar navbar-expand-lg" style="background-color: #539df8;">
+    <div class="container-fluid">
+        <a class="navbar-brand"><strong>OralDentalSoft</strong></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <b><a class="nav-link" style="color:#faf8fb;" routerLink="/bienvenidadentista"><i
+                                class="fa-solid fa-door-open"></i>&nbsp;&nbsp;Home </a> </b>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color:#faf8fb;" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-tooth"></i>&nbsp;&nbsp;<strong>Paciente</strong>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="/registropaciente">
+                                <i class="fa-solid fa-person-circle-plus"></i>&nbsp;&nbsp;Agregar Pacientes
+                            </a></li>
+                        <li><a class="dropdown-item" routerLink="/listadopaciente">
+                                <i class="fa-solid fa-list"></i>&nbsp;&nbsp;&nbsp;Listar Pacientes
+                            </a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color:#faf8fb;" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-tooth"></i>&nbsp;&nbsp;<strong>Citas</strong>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="#">
+                                <i class="fa-solid fa-person-circle-plus"></i>&nbsp;&nbsp;Agregar Citas
+                            </a></li>
+                        <li><a class="dropdown-item" routerLink="#">
+                                <i class="fa-solid fa-list"></i>&nbsp;&nbsp;&nbsp;Listar Citas
+                            </a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color:#faf8fb;" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-tooth"></i>&nbsp;&nbsp;<strong>Historias Clinicas</strong>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="#">
+                                <i class="fa-solid fa-person-circle-plus"></i>&nbsp;&nbsp;Agregar Historias Clinicas
+                            </a></li>
+                        <li><a class="dropdown-item" routerLink="#">
+                                <i class="fa-solid fa-list"></i>&nbsp;&nbsp;&nbsp;Listar Historias Clinicas
+                            </a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="nav-item">
+                <div class="flex-shrink-0 dropdown dropstart">
+                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <strong>Dentista&nbsp;</strong>
+                        <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small shadow">
+                        <li><a class="dropdown-item" routerLink="#">
+                                <i class="fa-solid fa-address-card"></i>&nbsp;&nbsp;Perfil
+                            </a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item btn btn-outline-danger" (click)="onClick()">
+                                <i class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;Cerrar Sesión
+                            </a></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>

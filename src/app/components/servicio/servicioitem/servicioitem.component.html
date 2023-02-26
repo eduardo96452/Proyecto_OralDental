@@ -1,0 +1,15 @@
+<div class="marginado">
+    <div class="row" [ngClass]="{'complete':item.complete}">
+        <div class="title">
+            <input type="checkbox" [checked]="item.complete" (change)="onToggle(item)">
+            &nbsp; &nbsp;
+            {{item.title}}
+        </div>
+        <div class="price">
+            {{item.price | currency}}
+        </div>
+        <div class="action">
+            <button (click)="onDelete(item)">Eliminar</button>
+        </div>
+    </div>
+</div>

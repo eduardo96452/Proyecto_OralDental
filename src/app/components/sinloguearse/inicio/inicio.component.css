@@ -1,0 +1,19 @@
+.margenes {
+    padding: 0;
+    margin: 3%;
+}
+.colortexto {
+    color: #535759;
+}
+
+.contenido{
+    height: 100%;
+    width: 100%;
+}
+
+.viewport{
+    height: 561px;
+    width: 100%;
+    border: 1px dotted rgb(255, 255, 255);
+    text-align: center;
+}

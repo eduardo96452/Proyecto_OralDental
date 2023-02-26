@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #539df8;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><u>OralDentalSoft</u></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <b><a class="nav-link" style="color:#faf8fb;" routerLink=""><i
+                                class="fa-solid fa-house"></i>&nbsp;&nbsp;Home </a> </b>
+                </li>
+                <li class="nav-item">
+                    <b><a class="nav-link" style="color:#faf8fb;" routerLink="/servicios"><i
+                                class="fa-solid fa-tooth"></i>&nbsp;&nbsp;Servicios</a></b>
+                </li>
+                <li class="nav-item">
+                    <b><a class="nav-link" style="color:#faf8fb;" routerLink="/contactos"> <i
+                                class="fa-solid fa-address-book"></i>&nbsp;&nbsp;Contactos</a></b>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+        <div class="margenes">
+            <br />
+            <p class="h1 text-center"><strong>¡Bienvenido(a) a la pagina para iniciar sesión! </strong></p>
+            <br />
+            <p class="h6 text-center">¡Bienvenido(a) de vuelta! Inicia sesión en nuestra página para acceder a todas las
+                características y servicios disponibles para nuestros usuarios registrados. Ingresa tus credenciales de
+                inicio de sesión para conectarte</p>
+
+            <div class="p-2 row g-6 margenes d-flex justify-content-center">
+                <div class="col-md-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../../../assets/img/pacientelogin.jpg" style="height:280px ; width: 285px;" class="card-img-top" alt="imagen de registro">
+                        <div class="card-body">
+                            <p class="h6 card-title"><strong>Iniciar como Paciente</strong></p>
+                            <p class="card-text">
+                                Podras acceder a todas las opciones como crear una cita y ver el historial dental.
+                            </p>
+                            <a class="btn btn-primary" routerLink="/loginpaciente">Ir a la Sección</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../../../assets/img/dentistalogin.jpg" style="height:280px ; width: 285px;" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="h6 card-title"><strong>Iniciar como Dentista</strong></p>
+                            <p class="card-text">
+                                Podrás acceder a las opciones como crear pacientes, crear citas y ver el historial
+                                dental de los pacientes.
+                                <br />
+                            </p>
+                            <a class="btn btn-primary" routerLink="/logindentista">Ir a la Sección</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../../../assets/img/administradorlogin.jpg" style="height:280px ; width: 285px;" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="h6 card-title"><strong>Iniciar como Administrador</strong></p>
+                            <p class="card-text">
+                                Podrás acceder a la opcione de crear dentistas.
+                                <br />
+                                <br />
+                            </p>
+                            <a href="#" class="btn btn-primary" routerLink="/login">Ir a la Sección</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <app-piepagina></app-piepagina>

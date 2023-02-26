@@ -1,20 +1,25 @@
 <app-navbarprincipal></app-navbarprincipal>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="places">
-    <table class="table" >
+<div class="margenes">
+  <nav
+    style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+    aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/bienvenida"><u><i class="fa-sharp fa-solid fa-house"></i></u></a></li>
+      <li class="breadcrumb-item active" aria-current="page">Enlistar</li>
+    </ol>
+  </nav>
+  <div class="places blanquito ">
+    <div class=" interno">
+      <table class="table">
         <thead>
           <tr>
             <th scope="col">#</th>
             <th scope="col">Nombre</th>
             <th scope="col">Apellido</th>
             <th scope="col">Tipo de Sangre</th>
+            <th scope="col">Acciones</th>
           </tr>
-        </thead >
+        </thead>
         <tbody *ngFor="let dentista of dentistas">
           <tr>
             <th scope="row"></th>
@@ -25,5 +30,7 @@
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
 </div>
 <app-piepagina></app-piepagina>

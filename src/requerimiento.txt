@@ -6,11 +6,12 @@
 * Listar Paciente
 * Nueva Cita
 * Listar Citas
+* Agregar Historias Clinicas
+* Listar Historias Clinicas
 
 
 
-
--------------------
+-----Paciente------
 * Listar Usuarios
 -------------------
 * Nueva Cita

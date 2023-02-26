@@ -1,1 +1,150 @@
-<p>registrarpaciente works!</p>
+<app-navbardentista></app-navbardentista>
+
+<div class="margenes">
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+        aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/bienvenidadentista"><i class="fa-sharp fa-solid fa-house"></i></a></li>
+            <li class="breadcrumb-item active" aria-current="page">Registro</li>
+        </ol>
+    </nav>
+    <div class="needs-validation blanquito">
+        <br />
+        <h1 class="text-center"><strong>Bienvenido al registro del Paciente</strong></h1>
+        <form class="row g-3 interno  form-group" [formGroup]="formulario">
+            <div class="col-sm-6">
+                <label for="correo" class="form-label">Correo Electronico*</label>
+                <input type="email" formControlName="email" class="form-control" id="correo"
+                    placeholder="nombre@paciente.com" ngModel maxlength="5" pattern="/^[a-zA-Z ]+$/">
+                <div class="invalid-feedback">
+                    Se requiere un Correo válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="contraseña" class="form-label">Contraseña*</label>
+                <input type="text" formControlName="password" class="form-control" id="contraseña"
+                    placeholder="contraseña">
+                <div class="invalid-feedback">
+                    Se requiere una contraseña válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="nombre" class="form-label">Nombre*</label>
+                <input type="text" formControlName="nombre" class="form-control" id="nombre" placeholder="Nombre">
+                <div class="invalid-feedback">
+                    Se requiere un Nombre válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="apellido" class="form-label">Apellido*</label>
+                <input type="text" id="lastName" placeholder="apellido" class="form-control" formControlName="apellido">
+                <div class="invalid-feedback">
+                    Se requiere un Apellido válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="tiposangre" class="form-label">Tipo de sangre*</label>
+                <input type="text" id="tiposangre" placeholder="A+" class="form-control" formControlName="tiposangre">
+                <div class="invalid-feedback">
+                    Se requiere un valor válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="firstName" class="form-label">Fecha de nacimiento*</label>
+                <input type="date" name="fechanacimiento" class="form-control" id="firstName"
+                    formControlName="fechanacimiento" placeholder="dd/mm/aaaa">
+                <div class="invalid-feedback">
+                    Se requiere un Numero válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="country" class="form-label">Sexo*</label>
+                <select class="form-select" name="tipoidentificacion" id="country" formControlName="sexo">
+                    <option value="">Elejir...</option>
+                    <option>Masculino</option>
+                    <option>Femenino</option>
+                </select>
+                <div class="invalid-feedback">
+                    Por favor seleccione el tipo de identificación.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="apellido" class="form-label">País*</label>
+                <input type="text" id="lastName" placeholder="País" class="form-control" formControlName="pais">
+                <div class="invalid-feedback">
+                    Se requiere un País válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="apellido" class="form-label">Ciudad*</label>
+                <input type="text" id="lastName" placeholder="Ciudad" class="form-control" formControlName="ciudad">
+                <div class="invalid-feedback">
+                    Se requiere un Ciudad válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="apellido" class="form-label">Dirección*</label>
+                <input type="text" id="lastName" placeholder="Dirección" class="form-control"
+                    formControlName="direccion">
+                <div class="invalid-feedback">
+                    Se requiere un Dirección válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="country" class="form-label">Tipo de Identificación*</label>
+                <select class="form-select" name="tipoidentificacion" id="country" formControlName="tipoidentificacion">
+                    <option value="">Elejir...</option>
+                    <option>Cedula</option>
+                    <option>Pasaporte</option>
+                </select>
+                <div class="invalid-feedback">
+                    Por favor seleccione el tipo de identificación.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="firstName" class="form-label">Numero de identificación*</label>
+                <input type="number" name="numeroidentificacion" class="form-control" id="firstName"
+                    formControlName="numeroidentificacion" placeholder="0000000000">
+                <div class="invalid-feedback">
+                    Se requiere un Numero válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="apellido" class="form-label">Teléfono*</label>
+                <input type="text" id="lastName" placeholder="Teléfono" class="form-control" formControlName="telefono">
+                <div class="invalid-feedback">
+                    Se requiere un Teléfono válido.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="country" class="form-label">Tipo de usuario*</label>
+                <select class="form-select" name="especialidad" id="country" formControlName="tipo">
+                    <option value="">Elejir...</option>
+                    <option>Paciente</option>
+                </select>
+                <div class="invalid-feedback">
+                    Por favor seleccione una especialidad.
+                </div>
+            </div>
+
+            <div class="col">
+                <input type="submit" value="Enviar" class="btn btn-info">
+            </div>
+        </form>
+        <br />
+    </div>
+</div>
+<app-piepagina></app-piepagina>

@@ -1,3 +1,5 @@
+import { Servicio } from './models/servicio';
+import { AuthGuard } from './security/auth.guard';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -10,14 +12,14 @@ import { CargarScriptsService } from './cargar-scripts.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContactosComponent } from './components/contactos/contactos.component';
-import { ServiciosComponent } from './components/servicios/servicios.component';
+import { ContactosComponent } from './components/sinloguearse/contactos/contactos.component';
+import { ServiciosComponent } from './components/servicio/servicios/servicios.component';
 import { LoginComponent } from './components/login/login.component';
-import { InicioComponent } from './components/inicio/inicio.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { PiedepaginaprincipalComponent } from './components/piedepaginaprincipal/piedepaginaprincipal.component';
+import { InicioComponent } from './components/sinloguearse/inicio/inicio.component';
+import { NavbarComponent } from './components/sinloguearse/navbar/navbar.component';
+import { PiedepaginaprincipalComponent } from './components/sinloguearse/piedepaginaprincipal/piedepaginaprincipal.component';
 import { PaginadentistaComponent } from './components/paginadentista/paginadentista.component';
-import { NavbarprincipalComponent } from './components/navbarprincipal/navbarprincipal.component';
+import { NavbarprincipalComponent } from './components/adminitrado/navbarprincipal/navbarprincipal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -26,7 +28,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { PaginabienvenidaComponent } from './components/adminitrado/paginabienvenida/paginabienvenida.component';
 import { RegistrodentistaComponent } from './components/adminitrado/registrodentista/registrodentista.component';
-import { PiepaginaComponent } from './components/piepagina/piepagina.component';
+import { PiepaginaComponent } from './components/adminitrado/piepagina/piepagina.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
@@ -37,6 +39,14 @@ import { ListarpacienteComponent } from './components/dentista/listarpaciente/li
 import { CrearcitasComponent } from './components/dentista/crearcitas/crearcitas.component';
 import { ListarcitasComponent } from './components/dentista/listarcitas/listarcitas.component';
 import { provideAuth,getAuth } from '@angular/fire/auth';
+import { ServicioitemComponent } from './components/servicio/servicioitem/servicioitem.component';
+import { ServiciototalComponent } from './components/servicio/serviciototal/serviciototal.component';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { PantallaloginComponent } from './components/pantallalogin/pantallalogin.component';
+import { LogindentistaComponent } from './components/logindentista/logindentista.component';
+import { LoginpacienteComponent } from './components/loginpaciente/loginpaciente.component';
+import { BienvenidadentistaComponent } from './components/dentista/bienvenidadentista/bienvenidadentista.component';
+import { ContactoprincipalComponent } from './components/sinloguearse/contactoprincipal/contactoprincipal.component';
 
 @NgModule({
   declarations: [
@@ -58,23 +68,20 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     ListarpacienteComponent,
     CrearcitasComponent,
     ListarcitasComponent,
+    ServicioitemComponent,
+    ServiciototalComponent,
+    PantallaloginComponent,
+    LogindentistaComponent,
+    LoginpacienteComponent,
+    BienvenidadentistaComponent,
+    ContactoprincipalComponent,
   ],
   imports: [
     BrowserModule,
+    ScrollingModule,
     FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      {path:'', component:InicioComponent},
-      {path:'servicios', component:ServiciosComponent},
-      {path:'contactos', component:ContactosComponent},
-      {path:'login', component:LoginComponent},
-      {path:'principal', component:NavbarprincipalComponent},
-      {path:'bienvenida', component:PaginabienvenidaComponent},
-      {path:'registropaciente', component:RegistrodentistaComponent},
-      {path:'listadopaciente', component:ListadodentistaComponent},
-      {path: '**', redirectTo:'/', pathMatch:'full'},
-    ]),
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
@@ -86,7 +93,8 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     provideAuth(() => getAuth()),
   ],
   providers: [
-    CargarScriptsService
+    CargarScriptsService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

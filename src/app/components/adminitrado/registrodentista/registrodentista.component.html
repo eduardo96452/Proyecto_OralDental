@@ -1,28 +1,30 @@
 <app-navbarprincipal></app-navbarprincipal>
-
-<br />
-<br />
-<br />
-<br />
-
-<div>
+<div class="margenes">
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+        aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/bienvenida"><u><i
+                            class="fa-sharp fa-solid fa-house"></i></u></a></li>
+            <li class="breadcrumb-item active" aria-current="page">Registro</li>
+        </ol>
+    </nav>
     <div class="needs-validation blanquito" novalidate>
         <br />
         <h1 class="text-center"><strong>Bienvenido al registro del Odontólogo</strong></h1>
         <form class="row g-3 interno  form-group" [formGroup]="formulario" (ngSubmit)="onSubmit()">
             <div class="col-sm-6">
-                <label for="firstName" class="form-label">Correo Electronico*</label>
-                <input type="email" name="correo" class="form-control" id="firstName" placeholder="nombre@correo.com"
-                    value="">
+                <label for="correo" class="form-label">Correo Electronico*</label>
+                <input type="email" formControlName="email" class="form-control" id="correo"
+                    placeholder="nombre@correo.com">
                 <div class="invalid-feedback">
                     Se requiere un Correo válido.
                 </div>
             </div>
 
             <div class="col-sm-6">
-                <label for="lastName" class="form-label">Contraseña*</label>
-                <input type="text" name="contraseña" class="form-control" id="lastName" placeholder="contraseña"
-                    value="">
+                <label for="contraseña" class="form-label">Contraseña*</label>
+                <input type="text" formControlName="password" class="form-control" id="contraseña"
+                    placeholder="contraseña">
                 <div class="invalid-feedback">
                     Se requiere una contraseña válido.
                 </div>
@@ -30,8 +32,7 @@
 
             <div class="col-sm-6">
                 <label for="nombre" class="form-label">Nombre*</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control"
-                formControlName="nombre">
+                <input type="text" formControlName="nombre" class="form-control" id="nombre" placeholder="Nombre">
                 <div class="invalid-feedback">
                     Se requiere un Nombre válido.
                 </div>
@@ -39,8 +40,7 @@
 
             <div class="col-sm-6">
                 <label for="apellido" class="form-label">Apellido*</label>
-                <input type="text" name="apellido" id="lastName" placeholder="apellido" class="form-control"
-                formControlName="apellido">
+                <input type="text" id="lastName" placeholder="apellido" class="form-control" formControlName="apellido">
                 <div class="invalid-feedback">
                     Se requiere un Apellido válido.
                 </div>
@@ -48,8 +48,7 @@
 
             <div class="col-sm-6">
                 <label for="tiposangre" class="form-label">Tipo de sangre*</label>
-                <input type="text" name="tiposangre" id="tiposangre" placeholder="A+" class="form-control"
-                formControlName="tiposangre">
+                <input type="text" id="tiposangre" placeholder="A+" class="form-control" formControlName="tiposangre">
                 <div class="invalid-feedback">
                     Se requiere un valor válido.
                 </div>
@@ -57,7 +56,8 @@
 
             <div class="col-sm-6">
                 <label for="firstName" class="form-label">Fecha de nacimiento*</label>
-                <input type="date" name="fechanacimiento" class="form-control" id="firstName" placeholder="dd/mm/aaaa">
+                <input type="date" name="fechanacimiento" class="form-control" id="firstName"
+                    formControlName="fechanacimiento" placeholder="dd/mm/aaaa">
                 <div class="invalid-feedback">
                     Se requiere un Numero válido.
                 </div>
@@ -65,7 +65,7 @@
 
             <div class="col-sm-6">
                 <label for="country" class="form-label">Tipo de Identificación*</label>
-                <select class="form-select" name="tipoidentificacion" id="country">
+                <select class="form-select" name="tipoidentificacion" id="country" formControlName="tipoidentificacion">
                     <option value="">Elejir...</option>
                     <option>Cedula</option>
                     <option>Pasaporte</option>
@@ -78,7 +78,7 @@
             <div class="col-sm-6">
                 <label for="firstName" class="form-label">Numero de identificación*</label>
                 <input type="number" name="numeroidentificacion" class="form-control" id="firstName"
-                    placeholder="0000000000">
+                    formControlName="numeroidentificacion" placeholder="0000000000">
                 <div class="invalid-feedback">
                     Se requiere un Numero válido.
                 </div>
@@ -86,7 +86,7 @@
 
             <div class="col-sm-6">
                 <label for="country" class="form-label">Especialidad*</label>
-                <select class="form-select" name="especialidad" id="country">
+                <select class="form-select" name="especialidad" id="country" formControlName="especialidad">
                     <option value="">Elejir...</option>
                     <option>Dentista general</option>
                     <option>Odontopediatra o dentista pediátrico</option>
@@ -102,13 +102,16 @@
             </div>
 
             <div class="col-sm-6">
-                <label for="firstName" class="form-label">Trabajo profesional*</label>
-                <input type="text" name="trabajo" class="form-control" id="firstName" placeholder="Odontologo">
+                <label for="country" class="form-label">Tipo de usuario*</label>
+                <select class="form-select" name="especialidad" id="country" formControlName="tipo">
+                    <option value="">Elejir...</option>
+                    <option>Dentista</option>
+                </select>
                 <div class="invalid-feedback">
-                    Se requiere un trabajo válido.
+                    Por favor seleccione una especialidad.
                 </div>
             </div>
-            
+
             <div class="col">
                 <input type="submit" value="Enviar" class="btn btn-info">
             </div>
@@ -116,5 +119,4 @@
         <br />
     </div>
 </div>
-
 <app-piepagina></app-piepagina>

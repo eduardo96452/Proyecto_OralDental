@@ -1,11 +1,65 @@
 <app-navbarprincipal></app-navbarprincipal>
 
-<br />
-<br />
-<br />
-<br />
+<div class="margenes">
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+        aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/bienvenida"><i class="fa-sharp fa-solid fa-house"></i></a></li>
+        </ol>
+    </nav>
+    <p class="h1 text-center"><strong>¡Bienvenido(a) Administrador a su aplicación! </strong></p>
+    <br />
+    <p class="h6 text-center">¡Bienvenido(a) a la página donde podrás registrar y enlistar dentistas! Aquí
+        encontrarás un espacio para agregar a
+        los dentistas de tu preferencia. ¡Gracias por elegirnos y esperamos que encuentres lo que estás buscando en
+        nuestra
+        página!</p>
 
-<h1 class="display-1">Bienvendo Dentista a su aplicación</h1>
+    <div class="p-2 row g-6 margenes d-flex justify-content-center">
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img src="../../../assets/img/registrar.jpg" class="card-img-top" alt="imagen de registro">
+                <div class="card-body">
+                    <p class="h5 card-title"><strong>Registrar Dentista</strong></p>
+                    <p class="card-text">
 
-
+                        Podrás agregar los detalles de los dentistas.
+                        Al registrarse, estos profesionales dentales serán incluidos en nuestra lista de dentistas.
+                    </p>
+                    <a class="btn btn-primary" routerLink="/registrodoctor">Ir a la Sección</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img src="../../../assets/img/enlistar.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="h5 card-title"><strong>Enlistar Dentista</strong></p>
+                    <p class="card-text">
+                        <br />
+                        Podrás encontrar una lista completa de dentistas registrados y podras administrarlos.
+                        <br />
+                        <br />
+                    </p>
+                    <a class="btn btn-primary" routerLink="/listadodoctor">Ir a la Sección</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img src="../../../assets/img/perfiladmin.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="h5 card-title"><strong>Perfil de Usuario</strong></p>
+                    <p class="card-text">
+                        <br />
+                        Podrás encontrar información detallada sobre el usuario que a iniciado sesión
+                        y podras editar esos aspectos.
+                        <br />
+                    </p>
+                    <a href="#" class="btn btn-primary" routerLink="/bienvenida">Ir a la Sección</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <app-piepagina></app-piepagina>

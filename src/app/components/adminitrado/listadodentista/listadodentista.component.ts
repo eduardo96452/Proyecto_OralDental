@@ -14,9 +14,14 @@ export class ListadodentistaComponent implements OnInit {
   constructor( private dentistaservice: DentistaService ) {
 
     this.dentistas = [{
-      nombre: 'Prueba de sitio',
-      apellido: 'Esto es una prueba',
-      tiposangre: 'Esto'
+      nombre: 'nombre',
+      apellido: 'apellido',
+      tiposangre: 'tiposangre',
+      fechanacimiento: '',
+      tipoidentificacion: '',
+      numeroidentificacion: '',
+      especialidad: '',
+      tipo: '',
     }];
   }
 
