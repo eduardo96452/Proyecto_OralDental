@@ -47,6 +47,11 @@ import { LogindentistaComponent } from './components/logindentista/logindentista
 import { LoginpacienteComponent } from './components/loginpaciente/loginpaciente.component';
 import { BienvenidadentistaComponent } from './components/dentista/bienvenidadentista/bienvenidadentista.component';
 import { ContactoprincipalComponent } from './components/sinloguearse/contactoprincipal/contactoprincipal.component';
+import { ScheduleModule, RecurrenceEditorModule, DayService, WeekService, WorkWeekService, MonthService, MonthAgendaService } from '@syncfusion/ej2-angular-schedule';
+import { PerfildentistaComponent } from './components/dentista/perfildentista/perfildentista.component';
+import { PerfiladminComponent } from './components/adminitrado/perfiladmin/perfiladmin.component';
+import { CrearhistoriaclinicaComponent } from './components/dentista/crearhistoriaclinica/crearhistoriaclinica.component';
+import { ListarhistoriaclinicaComponent } from './components/dentista/listarhistoriaclinica/listarhistoriaclinica.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +80,10 @@ import { ContactoprincipalComponent } from './components/sinloguearse/contactopr
     LoginpacienteComponent,
     BienvenidadentistaComponent,
     ContactoprincipalComponent,
+    PerfildentistaComponent,
+    PerfiladminComponent,
+    CrearhistoriaclinicaComponent,
+    ListarhistoriaclinicaComponent,
   ],
   imports: [
     BrowserModule,
@@ -91,10 +100,16 @@ import { ContactoprincipalComponent } from './components/sinloguearse/contactopr
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),
+    ScheduleModule, RecurrenceEditorModule,
   ],
   providers: [
-    CargarScriptsService,
-    AuthGuard
+    CargarScriptsService, 
+    AuthGuard, 
+    DayService, 
+    WeekService, 
+    WorkWeekService, 
+    MonthService, 
+    MonthAgendaService,
   ],
   bootstrap: [AppComponent]
 })

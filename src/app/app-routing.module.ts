@@ -15,6 +15,12 @@ import { LogindentistaComponent } from './components/logindentista/logindentista
 import { LoginpacienteComponent } from './components/loginpaciente/loginpaciente.component';
 import { BienvenidadentistaComponent } from './components/dentista/bienvenidadentista/bienvenidadentista.component';
 import { ContactoprincipalComponent } from './components/sinloguearse/contactoprincipal/contactoprincipal.component';
+import { CrearcitasComponent } from './components/dentista/crearcitas/crearcitas.component';
+import { PerfiladminComponent } from './components/adminitrado/perfiladmin/perfiladmin.component';
+import { PerfildentistaComponent } from './components/dentista/perfildentista/perfildentista.component';
+import { ListarcitasComponent } from './components/dentista/listarcitas/listarcitas.component';
+import { CrearhistoriaclinicaComponent } from './components/dentista/crearhistoriaclinica/crearhistoriaclinica.component';
+import { ListarhistoriaclinicaComponent } from './components/dentista/listarhistoriaclinica/listarhistoriaclinica.component';
 
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { AuthGuard } from './security/auth.guard';
@@ -34,7 +40,13 @@ const routes: Routes = [
   { path: 'loginpaciente', component: LoginpacienteComponent  },
   { path: 'logindentista', component: LogindentistaComponent },
   { path: 'bienvenidadentista', component: BienvenidadentistaComponent },
-  
+  { path: 'crear_citas', component: CrearcitasComponent },
+  { path: 'perfildentista', component: PerfildentistaComponent },
+  { path: 'perfiladmin', component: PerfiladminComponent },
+  { path: 'listar_cita_detista', component: ListarcitasComponent },
+  { path: 'historia_clinica', component: CrearhistoriaclinicaComponent },
+  { path: 'listar_historia_clinica', component: ListarhistoriaclinicaComponent },
+
   //{ }
 ];
 

@@ -1,0 +1,43 @@
+.margen {
+    padding: 2%;
+    margin: 2%;
+}
+
+.colortodo {
+    background-color: #F9F3EE;
+}
+
+button.ui-button {
+    margin-right: .5rem;
+}
+
+.margen {
+    padding: 0%;
+    margin: 2%;
+}
+
+.colortodo {
+    background-color: #F9F3EE;
+}
+
+button.ui-button {
+    margin-right: .5rem;
+}
+
+.blanquito {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.651);
+    padding: 0;
+    margin: 3%;
+}
+
+.interno {
+    padding: 0;
+    margin: 1%;
+}
+
+.margenes {
+    padding: 0;
+    margin: 2%;
+}

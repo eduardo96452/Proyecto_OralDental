@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
+import { UntilDestroy } from '@ngneat/until-destroy';
 
+@UntilDestroy()
 @Component({
   selector: 'app-navbardentista',
   templateUrl: './navbardentista.component.html',
   styleUrls: ['./navbardentista.component.css']
 })
 export class NavbardentistaComponent {
+
   constructor(
     private userService:UserService,
     private router:Router
@@ -20,6 +23,4 @@ export class NavbardentistaComponent {
     })
     .catch(error => console.log(error));
   }
-
-  
 }
